@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Zein — Salesforce Developer | Data Analyst & QA Engineer</title>
+  <meta name="description" content="Portfolio of Mohamed Zein — Salesforce Developer, Data Analyst & QA Engineer based in Dubai, UAE. Currently at EMAAR." />
+  <meta name="keywords" content="Mohamed Zein, Salesforce Developer, Data Analyst, QA Engineer, Dubai, Portfolio" />
+  <meta property="og:title" content="Mohamed Zein — Portfolio" />
+  <meta property="og:description" content="Salesforce Developer, Data Analyst & QA Engineer based in Dubai, UAE." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <span class="loader-bracket">&lt;</span>MZ<span class="loader-bracket"> /&gt;</span>
+      </div>
+      <div class="loader-bar">
+        <div class="loader-bar-fill" id="loaderBar"></div>
+      </div>
+      <p class="loader-text">Loading Portfolio<span class="loader-dots"></span></p>
+    </div>
+  </div>
+
+  <!-- Cursor Glow Effect -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Background Particles -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>MZ<span class="logo-bracket"> /&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <i class="fas fa-map-marker-alt"></i> Dubai, U.A.E
+      </div>
+      <h1 class="hero-title reveal">
+        <span class="hero-greeting">Hello, I'm</span>
+        <span class="hero-name">Mohamed <span class="gradient-text">Zein</span></span>
+      </h1>
+      <div class="hero-roles reveal">
+        <span class="typewriter" id="typewriter"></span>
+        <span class="typewriter-cursor">|</span>
+      </div>
+      <p class="hero-description reveal">
+        Detail-oriented professional building data-driven solutions and ensuring software reliability at <strong>EMAAR</strong>.
+        Passionate about leveraging analytics, Salesforce, and quality engineering to drive innovation.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Get in Touch
+        </a>
+        <a href="#projects" class="btn btn-outline">
+          <i class="fas fa-code"></i> View Work
+        </a>
+        <a href="Mohamed_Zein_FlowCV_Resume_2026-04-25.pdf" download class="btn btn-ghost">
+          <i class="fas fa-download"></i> Resume
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Companies</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-orbit">
+        <div class="orbit-ring ring-1">
+          <div class="orbit-icon"><i class="fab fa-salesforce"></i></div>
+        </div>
+        <div class="orbit-ring ring-2">
+          <div class="orbit-icon"><i class="fab fa-python"></i></div>
+        </div>
+        <div class="orbit-ring ring-3">
+          <div class="orbit-icon"><i class="fas fa-database"></i></div>
+        </div>
+        <div class="orbit-center">
+          <div class="orbit-center-content">
+            <i class="fas fa-terminal"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <div class="mouse">
+        <div class="mouse-wheel"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">01.</span> About Me
+      </h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a <strong>Salesforce Developer & Analyst</strong> currently at <strong>EMAAR</strong> in Dubai,
+            where I optimize Apex classes for the Emaar One App, perform QA testing, and analyze data flows
+            between Salesforce and Oracle EBS.
+          </p>
+          <p>
+            With a Bachelor's in Computer Science from the Arab Academy (ABET Accredited) and currently
+            pursuing a Master's in Data Analytics & AI at Steinbeis University in Berlin, I bridge
+            the gap between data analysis, quality assurance, and software development.
+          </p>
+          <p>
+            My journey spans from web performance testing to building AI-powered mobile apps,
+            and now to enterprise-level Salesforce development. I'm passionate about using data
+            to drive business insights and building reliable software systems.
+          </p>
+          <div class="about-details">
+            <div class="detail-item">
+              <i class="fas fa-envelope"></i>
+              <span>mohamedsaber948@gmail.com</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-phone"></i>
+              <span>+971 50 164 7525</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Sharjah, U.A.E</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-globe"></i>
+              <span>Arabic (Native) · English (Professional)</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image reveal">
+          <div class="about-card">
+            <div class="about-card-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="card-title">profile.json</span>
+            </div>
+            <pre class="about-code"><code>{
+  <span class="json-key">"name"</span>: <span class="json-string">"Mohamed Zein"</span>,
+  <span class="json-key">"role"</span>: <span class="json-string">"Salesforce Developer & Analyst"</span>,
+  <span class="json-key">"company"</span>: <span class="json-string">"EMAAR"</span>,
+  <span class="json-key">"location"</span>: <span class="json-string">"Dubai, U.A.E"</span>,
+  <span class="json-key">"education"</span>: <span class="json-string">"MSc Data Analytics & AI"</span>,
+  <span class="json-key">"experience"</span>: <span class="json-string">"2+ years"</span>,
+  <span class="json-key">"interests"</span>: [
+    <span class="json-string">"Data Analysis"</span>,
+    <span class="json-string">"Salesforce"</span>,
+    <span class="json-string">"Quality Assurance"</span>,
+    <span class="json-string">"AI & Machine Learning"</span>
+  ],
+  <span class="json-key">"available"</span>: <span class="json-bool">true</span>
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">02.</span> Experience
+      </h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Salesforce Developer & Analyst</h3>
+                <p class="timeline-company">
+                  <i class="fas fa-building"></i> Emaar Technology
+                  <span class="timeline-badge">Full Time</span>
+                  <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Dubai, U.A.E</span>
+                </p>
+              </div>
+              <span class="timeline-date">Apr 2025 — Present</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Optimized Apex classes used in the Emaar One App to improve performance and efficiency</li>
+              <li>Performed QA testing on Apex classes integrated with various external applications</li>
+              <li>Analyzed data flow between Salesforce and Oracle EBS to support enterprise-level projects</li>
+              <li>Cleaned and prepared data for accurate reporting and dashboard insights</li>
+              <li>Supported testing and deployment processes to ensure stable and reliable system updates</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Salesforce</span>
+              <span class="tag">Apex</span>
+              <span class="tag">Oracle EBS</span>
+              <span class="tag">QA Testing</span>
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Data Analyst & QA</h3>
+                <p class="timeline-company">
+                  <i class="fas fa-building"></i> Emaar Technology
+                  <span class="timeline-badge">Full Time</span>
+                  <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Dubai, U.A.E</span>
+                </p>
+              </div>
+              <span class="timeline-date">Sep 2024 — Apr 2025</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Designed and developed interactive dashboards using Power BI to visualize key business metrics and trends</li>
+              <li>Redesigned existing dashboards to improve user experience and data presentation, ensuring clearer insights for stakeholders</li>
+              <li>Collaborated with cross-functional teams to optimize data workflows, contributing to improved reporting and decision-making processes</li>
+              <li>Participated in end-to-end testing of applications, verifying functionalities and providing feedback for improvements</li>
+              <li>Conducted exploratory testing on mobile apps, identifying UI/UX issues and performance bottlenecks</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Power BI</span>
+              <span class="tag">Data Visualization</span>
+              <span class="tag">E2E Testing</span>
+              <span class="tag">Mobile Testing</span>
+              <span class="tag">Research</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Application Developer</h3>
+                <p class="timeline-company">
+                  <i class="fas fa-building"></i> Mega Trust Group
+                  <span class="timeline-badge">Internship</span>
+                  <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Alexandria, Egypt</span>
+                </p>
+              </div>
+              <span class="timeline-date">Oct 2023 — Jun 2024</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Conceived and led the development of Travel Genie, an AI-powered mobile app designed to guide tourists through cultural sites with virtual multilingual guides and interactive historical content</li>
+              <li>Built and deployed the app using Node.js, MongoDB, and FlutterFlow for cross-platform performance</li>
+              <li>Conducted manual and automated software testing to ensure functionality, usability, and performance</li>
+              <li>Led a small Agile team, managing sprints, feature planning, and code quality reviews</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">FlutterFlow</span>
+              <span class="tag">Agile</span>
+              <span class="tag">AI/ML</span>
+              <span class="tag">Team Lead</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Web Performance Tester</h3>
+                <p class="timeline-company">
+                  <i class="fas fa-building"></i> AppSoft Co
+                  <span class="timeline-badge">Internship</span>
+                  <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Alexandria, Egypt</span>
+                </p>
+              </div>
+              <span class="timeline-date">Aug 2023 — Sep 2023</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Documented results of tests conducted and maintained organized database of all findings</li>
+              <li>Performed manual testing of web applications, ensuring high-quality product releases</li>
+              <li>Reported bugs and errors to development team, following up on issues until resolved</li>
+              <li>Collaborated with engineers to develop effective strategies and test plans</li>
+              <li>Provided feedback to development team regarding system usability improvements</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Web Testing</span>
+              <span class="tag">Bug Reporting</span>
+              <span class="tag">Test Plans</span>
+              <span class="tag">Usability</span>
+              <span class="tag">Documentation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section" id="education">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">03.</span> Education
+      </h2>
+      <div class="education-grid">
+        <div class="edu-card reveal">
+          <div class="edu-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="edu-badge">In Progress</div>
+          <h3 class="edu-degree">Master in Data Analytics & AI</h3>
+          <p class="edu-school">Steinbeis University</p>
+          <p class="edu-location"><i class="fas fa-map-marker-alt"></i> Berlin, Germany</p>
+          <p class="edu-date"><i class="fas fa-calendar"></i> May 2025 — Present</p>
+          <p class="edu-note">German Accreditation Council through FIBAA</p>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="edu-badge completed">Completed</div>
+          <h3 class="edu-degree">BSc Computer Science</h3>
+          <p class="edu-school">Arab Academy for Science, Technology & Maritime Transport</p>
+          <p class="edu-location"><i class="fas fa-map-marker-alt"></i> Alexandria, Egypt</p>
+          <p class="edu-date"><i class="fas fa-calendar"></i> Sep 2020 — Sep 2024</p>
+          <p class="edu-note">ABET Accredited · GPA: 3.25</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">04.</span> Skills & Tools
+      </h2>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fab fa-salesforce"></i></div>
+            <h3>CRM & Cloud</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Salesforce</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Apex</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>SOQL</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Oracle Cloud / EBS</span><span class="skill-percent">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+            <h3>Data & Analytics</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Power BI</span><span class="skill-percent">92%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>SQL</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Tableau</span><span class="skill-percent">78%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Excel</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Snowflake / Informatica</span><span class="skill-percent">70%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Python</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>JavaScript</span><span class="skill-percent">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Java</span><span class="skill-percent">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>C++ / Kotlin</span><span class="skill-percent">70%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-bug"></i></div>
+            <h3>Quality Assurance</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Cypress</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Test Automation</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Manual / E2E Testing</span><span class="skill-percent">92%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Jira / Trello</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-globe"></i></div>
+            <h3>Web & Mobile</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>HTML / CSS</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Node.js</span><span class="skill-percent">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>MongoDB</span><span class="skill-percent">78%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>FlutterFlow</span><span class="skill-percent">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Analytical Thinking</span><span class="skill-percent">95%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Problem-Solving</span><span class="skill-percent">92%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Communication</span><span class="skill-percent">95%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Attention to Detail</span><span class="skill-percent">94%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="94"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">05.</span> Projects
+      </h2>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-plane"></i></div>
+            <div class="project-links">
+              <span class="project-badge">Graduation Project</span>
+            </div>
+          </div>
+          <h3 class="project-title">Travel Genie App</h3>
+          <p class="project-description">
+            AI-powered mobile application that enhances tourist experiences with virtual multilingual guides
+            and interactive historical content about ancient monuments. Built for cross-platform with modern tech.
+          </p>
+          <div class="project-tech">
+            <span>Node.js</span>
+            <span>MongoDB</span>
+            <span>FlutterFlow</span>
+            <span>AI/ML</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-medal"></i></div>
+            <div class="project-links">
+              <span class="project-badge">Data Analysis</span>
+            </div>
+          </div>
+          <h3 class="project-title">2024 Olympic Games Dashboard</h3>
+          <p class="project-description">
+            Comprehensive Power BI dashboard for visualizing Paris 2024 Olympics metrics with dynamic filters
+            for multidimensional analysis. Automated data cleaning with Python and interactive Excel visualizations.
+          </p>
+          <div class="project-tech">
+            <span>Power BI</span>
+            <span>Python</span>
+            <span>Excel</span>
+            <span>Data Cleaning</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-cloud"></i></div>
+            <div class="project-links">
+              <span class="project-badge">Enterprise</span>
+            </div>
+          </div>
+          <h3 class="project-title">Emaar One App Optimization</h3>
+          <p class="project-description">
+            Optimized Apex classes and data flows for the Emaar One App, improving performance and system reliability.
+            Analyzed Salesforce-Oracle EBS data integration for enterprise projects.
+          </p>
+          <div class="project-tech">
+            <span>Salesforce</span>
+            <span>Apex</span>
+            <span>Oracle EBS</span>
+            <span>QA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="section section-alt" id="certifications">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">06.</span> Certifications
+      </h2>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fab fa-salesforce"></i></div>
+          <h3>Salesforce Sales Operations</h3>
+          <p class="cert-issuer">Coursera · Jul 2025</p>
+          <a href="https://coursera.org/share/9f73cc446e7df6015504bec42ab5edfb" target="_blank" rel="noopener" class="cert-link">
+            View Certificate <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fab fa-google"></i></div>
+          <h3>Google Data Analytics</h3>
+          <p class="cert-issuer">Google · Feb 2025</p>
+          <a href="https://coursera.org/account/accomplishments/specialization/SQLMOAK0OH4B" target="_blank" rel="noopener" class="cert-link">
+            View Certificate <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+          <h3>Oracle Cloud Infrastructure</h3>
+          <p class="cert-issuer">Oracle · Dec 2024</p>
+          <a href="https://coursera.org/account/accomplishments/records/YV89ZBZ7SMIS" target="_blank" rel="noopener" class="cert-link">
+            View Certificate <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-database"></i></div>
+          <h3>SQL for Data Analysis</h3>
+          <p class="cert-issuer">LinkedIn · Oct 2024</p>
+          <a href="https://linkedin.com/learning/certificates/7bc4a0a191a00eae365cd4a81266178875d81dc58acb333a6ee7cb71ab5f25eb" target="_blank" rel="noopener" class="cert-link">
+            View Certificate <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Intro to Mobile Development</h3>
+          <p class="cert-issuer">Meta · Feb 2025</p>
+          <span class="cert-link disabled">Certificate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trailblazer Section -->
+  <section class="section" id="trailblazer">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">07.</span> Salesforce Trailblazer
+      </h2>
+      <div class="trailblazer-wrapper reveal">
+        <div class="trailblazer-header">
+          <div class="trailblazer-avatar">
+            <i class="fab fa-salesforce"></i>
+          </div>
+          <div class="trailblazer-info">
+            <h3>Mohamed Saber Mohamed Zein</h3>
+            <p>Data Analyst at Emaar &middot; SH, United Arab Emirates</p>
+            <a href="https://www.salesforce.com/trailblazer/lfx40dd2qgdkebkj54" target="_blank" rel="noopener" class="trailblazer-profile-link">
+              View Full Profile <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+        <div class="trailblazer-stats">
+          <div class="tb-stat">
+            <div class="tb-stat-number" data-target="36">0</div>
+            <div class="tb-stat-label">Badges</div>
+          </div>
+          <div class="tb-stat">
+            <div class="tb-stat-number" data-target="18625" data-format="comma">0</div>
+            <div class="tb-stat-label">Points</div>
+          </div>
+          <div class="tb-stat">
+            <div class="tb-stat-number" data-target="11">0</div>
+            <div class="tb-stat-label">Trails</div>
+          </div>
+        </div>
+        <div class="trailblazer-badges">
+          <h4 class="tb-badges-title">Recent Badges</h4>
+          <div class="tb-badge-list">
+            <a href="https://trailhead.salesforce.com/content/learn/modules/ai-data-crm-quick-look" target="_blank" rel="noopener" class="tb-badge">
+              <div class="tb-badge-icon"><i class="fas fa-robot"></i></div>
+              <span>Data + AI + CRM: Quick Look</span>
+            </a>
+            <a href="https://trailhead.salesforce.com/content/learn/modules/data-fundamentals-for-ai" target="_blank" rel="noopener" class="tb-badge">
+              <div class="tb-badge-icon"><i class="fas fa-brain"></i></div>
+              <span>Data Fundamentals for AI</span>
+            </a>
+            <a href="https://trailhead.salesforce.com/content/learn/modules/natural-language-processing-basics" target="_blank" rel="noopener" class="tb-badge">
+              <div class="tb-badge-icon"><i class="fas fa-language"></i></div>
+              <span>Natural Language Processing Basics</span>
+            </a>
+          </div>
+        </div>
+        <div class="trailblazer-events">
+          <h4 class="tb-badges-title">Upcoming Events</h4>
+          <div class="tb-event-list">
+            <div class="tb-event"><i class="fas fa-calendar-check"></i> Agentforce World Tour NYC '26</div>
+            <div class="tb-event"><i class="fas fa-calendar-check"></i> Tableau Conference '26</div>
+            <div class="tb-event"><i class="fas fa-calendar-check"></i> Informatica World '26</div>
+            <div class="tb-event"><i class="fas fa-calendar-check"></i> Connections '26</div>
+            <div class="tb-event"><i class="fas fa-calendar-check"></i> Dreamforce '26</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">08.</span> Get in Touch
+      </h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="contact-intro">
+            I'm always open to new opportunities, collaborations, or just a friendly conversation.
+            Whether you have a project in mind or want to connect, feel free to reach out!
+          </p>
+          <div class="contact-methods">
+            <a href="mailto:mohamedsaber948@gmail.com" class="contact-method">
+              <div class="contact-method-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p>mohamedsaber948@gmail.com</p>
+              </div>
+            </a>
+            <a href="tel:+971501647525" class="contact-method">
+              <div class="contact-method-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <p>+971 50 164 7525</p>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/mohamed-zein-0a40631b0" target="_blank" rel="noopener" class="contact-method">
+              <div class="contact-method-icon"><i class="fab fa-linkedin"></i></div>
+              <div>
+                <h4>LinkedIn</h4>
+                <p>Mohamed Zein</p>
+              </div>
+            </a>
+            <a href="https://www.salesforce.com/trailblazer/lfx40dd2qgdkebkj54" target="_blank" rel="noopener" class="contact-method">
+              <div class="contact-method-icon"><i class="fab fa-salesforce"></i></div>
+              <div>
+                <h4>Trailblazer</h4>
+                <p>Salesforce Profile</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder=" " />
+              <label for="name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required placeholder=" " />
+              <label for="email">Your Email</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" required placeholder=" " />
+              <label for="subject">Subject</label>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+              <label for="message">Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>MZ<span class="logo-bracket"> /&gt;</span>
+        </div>
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/mohamed-zein-0a40631b0" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:mohamedsaber948@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.salesforce.com/trailblazer/lfx40dd2qgdkebkj54" target="_blank" rel="noopener" aria-label="Salesforce Trailblazer">
+            <i class="fab fa-salesforce"></i>
+          </a>
+        </div>
+        <p class="footer-text">
+          Designed & Built by Mohamed Zein &copy; <span id="footerYear"></span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

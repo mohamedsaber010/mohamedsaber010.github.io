@@ -190,10 +190,10 @@ function initTypewriter() {
   if (!el) return;
 
   const roles = [
-    'Salesforce Developer',
-    'Data Analyst',
-    'QA Engineer',
-    'Problem Solver'
+    'AI Engineer',
+    'LLM & RAG Builder',
+    'AI Agent Developer',
+    'Enterprise AI'
   ];
 
   let roleIdx = 0;

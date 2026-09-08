@@ -277,8 +277,25 @@ img {
   font-size: 1.05rem;
   color: var(--text-secondary);
   line-height: 1.8;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   max-width: 540px;
+}
+
+.hero-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.hero-stack span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 6px 12px;
+  border-radius: 100px;
+  color: var(--accent-cyan);
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.2);
 }
 
 .hero-description strong {
@@ -1612,6 +1629,10 @@ img {
   }
 
   .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-stack {
     justify-content: center;
   }
 
